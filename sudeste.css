@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap');
+
+:root {
+  --marrom: #5C3A21;
+  --bege: #F5F0E1;
+  --verde: #7A9E7E;
+  --vinho: #8B3A3A;
+  --branco: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--marrom); 
+  color: var(--branco);
+  line-height: 1.6;
+  padding: 20px;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.406), rgba(255, 255, 255, 0.379)), 
+    url("img/restaurante.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#header-principal {
+  background-color: var(--marrom);
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 4px solid var(--verde);
+}
+
+#titulo-principal {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+#subtitulo {
+  font-size: 1.2rem;
+  color: var(--bege); 
+  font-style: italic;
+}
+
+#menu-principal {
+  background-color: var(--vinho);
+  padding: 0.8rem 1rem;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+#menu-principal ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#menu-principal li {
+  list-style: none;
+}
+
+#menu-principal a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+#menu-principal a:hover,
+#menu-principal a:focus {
+  background-color: var(--verde); 
+  outline: none;
+}
+
+#cardapio {
+  background-color: var(--bege);
+  color: #111111;
+  padding: 2rem 1rem;
+  margin-top: 30px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 15px rgba(92, 58, 33, 0.2);
+}
+
+#titulo-cardapio {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--marrom); 
+  font-family: 'Georgia', serif;
+}
+
+.prato {
+  background-color: var(--branco);
+  border: 2px solid var(--vinho);
+  border-radius: 12px;
+  margin: 1.5rem auto;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.prato:hover {
+  transform: scale(1.03);
+}
+
+.prato img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid var(--vinho);
+  border-radius: 12px 12px 0 0;
+}
+
+.texto-prato {
+  padding: 1rem 1.5rem;
+  color: #111111;
+  display: flex;
+  flex-direction: column;
+}
+
+.nome-prato {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--vinho);
+  font-weight: 700;
+  font-family: 'Georgia', serif;
+}
+
+.regiao, 
+.ingredientes, 
+.preco, 
+.qualidade, 
+.descricao {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.preco, .qualidade {
+  font-weight: 700;
+  color: var(--marrom);
+}
+
+footer {
+  background-color: var(--marrom); 
+  color: var(--bege); 
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9em;
+  box-shadow: inset 0 1px 5px rgba(0,0,0,0.2);
+  margin-top: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+
+@media (min-width: 768px) {
+  .prato {
+    flex-direction: row;
+  }
+
+  .prato img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px 0 0 12px;
+    border-bottom: none;
+    border-right: 2px solid var(--vinho);
+  }
+
+  .texto-prato {
+    flex: 1;
+  }
+}
+
+
+@media (max-width: 768px) {
+  html {
+    font-size: 95%;
+  }
+
+  #titulo-principal {
+    font-size: 2rem;
+  }
+
+  #subtitulo {
+    font-size: 1rem;
+  }
+
+  #menu-principal ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #menu-principal a {
+    width: 100%;
+    text-align: center;
+  }
+
+  #cardapio {
+    padding: 1.5rem 1rem;
+  }
+
+  .prato {
+    flex-direction: column;
+  }
+
+  .prato img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
+    border-right: none;
+    border-bottom: 2px solid var(--vinho);
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px 5px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  html {
+    font-size: 90%;
+  }
+
+  #titulo-principal {
+    font-size: 1.6rem;
+  }
+
+  .nome-prato {
+    font-size: 1.3rem;
+  }
+}

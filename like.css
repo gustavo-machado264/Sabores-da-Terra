@@ -1,0 +1,111 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f1ea;
+  color: #5c3a21;
+  margin: 0;
+  padding: 0 1rem;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(92, 58, 33, 0.3);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #8b3a3a;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-voltar {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #7a9e7e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: #5a7a5a;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn-voltar {
+    width: 100%;
+    padding: 0.8rem 0;
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .btn-voltar {
+    font-size: 0.95rem;
+    padding: 0.75rem 0;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .btn-voltar {
+    font-size: 0.9rem;
+    padding: 0.7rem 0;
+  }
+}
