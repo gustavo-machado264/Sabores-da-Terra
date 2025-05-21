@@ -10,8 +10,8 @@ body {
   color: #FFFFFF;
   line-height: 1.6;
   padding: 1rem;
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.406), rgba(255, 255, 255, 0.379)), 
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.406), rgba(255, 255, 255, 0.379)),
     url("img/restaurante.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -46,12 +46,17 @@ body {
 }
 
 #menu-principal ul {
-  display: flex;
-  justify-content: center;
   list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 1rem;
 }
+
 
 #menu-principal a {
   color: #FFFFFF;
@@ -131,7 +136,8 @@ body {
   font-family: 'Georgia', serif;
 }
 
-.preco, .regiao {
+.preco,
+.regiao {
   font-weight: 600;
   color: #5C3A21;
   margin-bottom: 0.3rem;
@@ -211,4 +217,45 @@ footer {
 
 footer p {
   margin: 0.3rem 0;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+    margin: 10px;
+  }
+
+  #menu-principal ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #menu-principal.menu-fechado ul {
+    display: none;
+  }
+
+  #menu-principal.menu-aberto ul {
+    display: block;
+    background-color: #8B3A3A;
+    padding: 10px;
+  }
+
+  #menu-principal li {
+    margin-bottom: 10px;
+  }
+
+  #menu-principal a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
 }

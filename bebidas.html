@@ -15,20 +15,20 @@
         <p id="subtitulo">Seleção de Bebidas</p>
     </header>
 
-    <nav id="menu-principal">
+    <nav id="menu-principal" class="menu-fechado">
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="sudeste.html">Sudeste</a></li>
             <li><a href="centro-oeste.html">Centro-Oeste</a></li>
             <li><a href="bebidas.html">Bebidas</a></li>
-            <li><a href="reserva.html">Reservas</a></li>
+            <li><a href="reserva.html">Reserva</a></li>
         </ul>
+        <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>
     </nav>
 
     <section id="cardapio">
         <h2 id="titulo-cardapio">Bebidas Disponíveis</h2>
 
-        <!-- Bebidas comuns -->
         <article class="prato">
             <img src="bebidas/coca.webp" alt="Coca">
             <div class="texto-prato">
@@ -100,7 +100,6 @@
             </div>
         </article>
 
-        <!-- Bebidas regionais -->
         <article class="prato">
             <img src="bebidas/Caldo de Cana.webp" alt="Caldo de Cana">
             <div class="texto-prato">
@@ -187,7 +186,7 @@
         <p>&copy; 2025 Sabores da Terra. Todos os direitos reservados.</p>
         <p>Desenvolvido por Gustavo Machado</p>
     </footer>
-
+    <script src="navegacao.js"></script>
 </body>
 
 </html>
